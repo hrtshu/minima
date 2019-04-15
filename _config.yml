@@ -43,6 +43,10 @@ minima:
 #header_pages:
 # - about.md
 
+# Cookie Consent settings
+cookie_consent:
+  enabled: true
+
 # Build settings
 theme: minima
 

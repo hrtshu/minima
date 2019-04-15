@@ -1,0 +1,30 @@
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "{{ site.cookie_consent.palette.popup.background | default: '#edeff5' }}",
+      "text": "{{ site.cookie_consent.palette.popup.text | default: '#838391' }}",
+      "link": "{{ site.cookie_consent.palette.popup.link | default: '#838391' }}"
+    },
+    "button": {
+      "background": "{{ site.cookie_consent.palette.button.background | default: '#4b81e8' }}",
+      "hover": "{{ site.cookie_consent.palette.button.hover | default: '#4b81e8' }}",
+      "border": "{{ site.cookie_consent.palette.button.border | default: 'transparent' }}",
+      "text": "{{ site.cookie_consent.palette.button.text | default: '#ffffff' }}"
+    }
+  },
+  "theme": "{{ site.cookie_consent.theme | default: 'block' }}",
+  "position": "{{ site.cookie_consent.position | default: 'bottom' }}",
+  "type": "{{ site.cookie_consent.type | default: 'info' }}",
+  "content": {
+    "message": "{{ site.cookie_consent.content.message | default: 'This website uses cookies.' }}",
+    "dismiss": "{{ site.cookie_consent.content.dismiss | default: 'Got it!' }}",
+    "allow": "{{ site.cookie_consent.content.allow | default: 'Allow cookies' }}",
+    "link": "{{ site.cookie_consent.content.link | default: 'Learn more' }}",
+    "href": "{{ site.cookie_consent.content.href | default: 'http://cookiesandyou.com/' }}"
+  }
+})});
+</script>
